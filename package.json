@@ -1,0 +1,23 @@
+{
+  "name": "angularjs",
+  "version": "0.0.1",
+  "description": "AngularJS Learning course",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigow/angularjs.git"
+  },
+  "author": "Rodrigo Wolschick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigow/angularjs/issues"
+  },
+  "homepage": "https://github.com/rodrigow/angularjs#readme"
+}
