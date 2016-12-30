@@ -10,7 +10,10 @@
     <h1>My first AngularJS app</h1>
 
     <div ng-controller="MyFirstController">
-
+      <label for="name">Name:</label>
+      <input id="name" type="text" ng-model="name">
+      <br />
+      <p>{{sayHello()}}</p>
     </div>
   </body>
 </html>
