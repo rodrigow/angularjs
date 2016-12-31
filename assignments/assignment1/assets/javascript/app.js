@@ -16,7 +16,7 @@
         if (dishList) {
           $scope.paint = 'text-success';
           if (dishList.length > 3) {
-            $scope.setMessage('Too much!');
+            $scope.setMessage('Too Much!');
           } else {
             $scope.setMessage('Enjoy!');
           }
