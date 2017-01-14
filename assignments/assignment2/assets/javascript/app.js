@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-
   angular.module('ShoppingListCheckOff', [])
   .controller('ToBuyController', ToBuyController)
   .controller('AlreadyBoughtController', AlreadyBoughtController)
@@ -15,6 +14,10 @@
 
     toBuy.hasItemsToBuy = function () {
         return toBuy.items.length > 0;
+    }
+
+    toBuy.buy = function (index) {
+      service.buy(index);
     }
   };
 
@@ -49,6 +52,9 @@
       return itemsBought;
     };
 
+    service.buy = function (index) {
+      itemsBought.push(itemsToBuy.splice(index, 1)[0]);
+    }
   }
 
 })();
