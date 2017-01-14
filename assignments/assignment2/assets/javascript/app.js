@@ -11,7 +11,11 @@
   function ToBuyController (service) {
     var toBuy = this;
 
-    toBuy.items = service.getItems();
+    toBuy.items = service.getItemsToBuy();
+
+    toBuy.hasItemsToBuy = function () {
+        return toBuy.items.length > 0;
+    }
   };
 
   AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
@@ -23,15 +27,15 @@
   function ShoppingListCheckOffService() {
     var service = this;
 
-    var data = [
-      { name: "butter", quantity: 3, bought: false },
-      { name: "sugar", quantity: 5, bought: false },
-      { name: "chocolate chips", quantity: 1, bought: false },
-      { name: "flour", quantity: 2, bought: false }
+    var itemsToBuy = [
+      { name: "butter", quantity: 3 },
+      { name: "sugar", quantity: 5 },
+      { name: "chocolate chips", quantity: 1 },
+      { name: "flour", quantity: 2 }
     ];
 
-    service.getItems = function () {
-      return data;
+    service.getItemsToBuy = function () {
+      return itemsToBuy;
     };
   }
 

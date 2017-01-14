@@ -23,7 +23,7 @@
           <button ng-click="toBuy.bought($index);" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button>
         </li>
      </ul>
-     <div class="emptyMessage">Everything is bought!</div>
+     <div ng-hide="toBuy.hasItemsToBuy()" class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
